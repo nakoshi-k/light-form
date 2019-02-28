@@ -1,18 +1,8 @@
 
-# HTMLFormElement to nested object literal or JSON
+# HTMLFormElement <=> nested object  
 
-don't need jquery 
 
 ``` javascript
-import formToJson from "formtojson"
-// or
-const formToJson = require("formtojson")
-
-//get form element
-const form = document.getElementById("#exmple-form")
-
-// to object literal
-const data = formToJSON(form,/[\[\]]+/)
 
 ```
 
@@ -51,11 +41,6 @@ const data = formToJSON(form,/[\[\]]+/)
         <input name="child[]" type="text" value="hanako">
         <input name="child[]" type="text" value="jiro">
 
-        <!-- duplicate name="[name]" to last element value -->
-        <input name="animal" type="text" value="saburo">
-        <input name="animal" type="text" value="yoshiko">
-        <input name="animal" type="text" value="shiro">
-
         <!-- nesting parse function split= /\[\]+/ -->
 
         <input type="text" name="other[qustion1]" value="anser1">
@@ -75,26 +60,6 @@ const data = formToJSON(form,/[\[\]]+/)
 ### script
 ```javascript
 
-const formToJson = require("formtojson")
-const form = document.getElementById("exmple-form")
-const data = formToJSON(form ,/[\[\]]+/);
-/*
-response data
- {
-  name: 'kei',
-  age: '42',
-  sex: 'woman',
-  job: 'worker',
-  hobby: [ 'music' , 'movie'],
-  private: 'true',
-  child: [ 'taro', 'hanako', 'jiro' ],
-  animal: 'shiro',
-  other: { qustion1: 'anser1', qustion2: 'anser2', qustion3: 'anser3' },
-  other2:
-   [ { qustion1: 'anser1' },
-     { qustion2: 'anser2' },
-     { qustion3: 'anser3' } ]
-}
-*/
+
 ```
 
