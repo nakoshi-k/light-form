@@ -1,7 +1,7 @@
-import getFields from "get-fields";
-import getConstructorName from "get-constructor-name";
-import { isFile, isSelect, isRadioNodeList, isCheckbox } from "fomr-element-decision";
-import { NestedValues } from "interfaces";
+import getFields from "./get-fields";
+import getConstructorName from "./get-constructor-name";
+import { isFile, isSelect, isRadioNodeList, isCheckbox } from "./fomr-element-decision";
+import { NestedValues } from "./interfaces";
 
 const getSelectValue = (select:HTMLSelectElement) => {
     if(!select.multiple){

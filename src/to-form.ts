@@ -1,5 +1,5 @@
-import { isRadioNodeList, isSelect, isCheckbox, isFile } from "fomr-element-decision";
-import { NestedValues ,FlatData,FlatDataRow,FormChild} from "interfaces";
+import { isRadioNodeList, isSelect, isCheckbox, isFile } from "./fomr-element-decision";
+import { NestedValues ,FlatData,FlatDataRow,FormChild} from "./interfaces";
 
 export const bracketed = (parent : string,key : string|number) => 
     (parent === "") ? key : `${parent}[${key}]`

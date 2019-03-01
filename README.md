@@ -1,15 +1,11 @@
 
 # HTMLFormElement <=> nested object  
 
-``` javascript
 
-```
-
-## example
+## use example
 
 ### HTML
 ```html
-
 <form id="exmple-form">
         
         <!--input-->
@@ -27,7 +23,7 @@
         </select>
 
         <!-- select multiple --> 
-        <select name="hobby[]" multiple>
+        <select name="hobby" multiple>
             <option value="music" selected>music</option>
             <option value="fishing">fishing</option>
             <option value="movie" selected>movie</option>
@@ -35,7 +31,7 @@
 
         <input type="checkbox" name="private" value="true">
                         
-        <!-- duplicate name="[name][]" to array -->
+        <!-- duplicate name="[name]" to array and ingore "[]" suffix  -->
         <input name="child[]" type="text" value="taro">
         <input name="child[]" type="text" value="hanako">
         <input name="child[]" type="text" value="jiro">
@@ -58,7 +54,52 @@
 
 ### script
 ```javascript
+<script src="../dist/light-form.js"></script>
+const form = document.getElementById("form")
+const data = LightForm.toObject(form)
+/*
+//data
+{
+  "name": "kei",
+  "age": "42",
+  "sex": "man",
+  "job": "worker",
+  "hobby": [
+    "music",
+    "movie"
+  ],
+  "private": "",
+  "child": [
+    "taro",
+    "hanako",
+    "jiro"
+  ],
+  "other": {
+    "qustion1": "anser1",
+    "qustion2": "anser2",
+    "qustion3": "anser3"
+  },
+  "other2": [
+    {
+      "qustion1": "anser1"
+    },
+    {
+      "qustion1": "anser2"
+    },
+    {
+      "qustion1": "anser3"
+    }
+  ],
+  "photo": []
+}
+*/
 
+data.name = "kei#"
+
+//nested js object assign to form
+LightForm.toForm(form,data)
 
 ```
+
+## Option 
 

@@ -1,5 +1,5 @@
-import getConstructorName from "get-constructor-name";
-import { FormChild } from "interfaces";
+import getConstructorName from "./get-constructor-name";
+import { FormChild } from "./interfaces";
 
 export const isRadioNodeList = (formChild:FormChild) => 
     getConstructorName(formChild) === "RadioNodeList"
