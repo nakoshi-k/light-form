@@ -1,5 +1,5 @@
 {
-  "name": "formtojson",
+  "name": "light-form",
   "version": "1.0.0",
   "description": "HtmlFormElement to JSON",
   "scripts": {
