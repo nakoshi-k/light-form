@@ -2,6 +2,7 @@
   "name": "light-form",
   "version": "1.0.0",
   "description": "HtmlFormElement to JSON",
+  "main": "dist/index.js",
   "scripts": {
     "pretest": "webpack --config=\"webpack.config.test.js\"",
     "test": "./node_modules/.bin/mocha-headless-chrome -f ./www/index.html",
