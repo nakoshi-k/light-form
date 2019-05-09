@@ -55,6 +55,8 @@
 ### script
 ```javascript
 <script src="../dist/light-form.js"></script>
+<script>
+
 const form = document.getElementById("form")
 const data = LightForm.toObject(form)
 /*
@@ -98,6 +100,8 @@ data.name = "kei#"
 
 //nested js object assign to form
 LightForm.toForm(form,data)
+
+</script>
 
 ```
 

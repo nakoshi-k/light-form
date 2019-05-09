@@ -1,15 +1,26 @@
 {
-  "name": "formtojson",
-  "version": "1.0.0",
-  "description": "HtmlFormElement to JSON",
+  "name": "light-form",
+  "version": "0.0.2",
+  "main" : "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nakoshi-k/light-form.git"
+  },
+  "description": "form values to nested object and nested object assign to form",
   "scripts": {
     "pretest": "webpack --config=\"webpack.config.test.js\"",
     "test": "./node_modules/.bin/mocha-headless-chrome -f ./www/index.html",
     "build:tsc": "tsc",
     "build:webpack": "webpack",
-    "build:production": "npm run build:tsc & npm run build:webpack -- --mode=production",
+    "build:dev": "npm run build:tsc & npm run build:webpacknpm",
+    "build": "npm run build:tsc & npm run build:webpack -- --mode=production",
     "make:test": ""
   },
+  "keywords": [
+    "form",
+    "json",
+    "object"    
+  ],
   "author": "kei nakoshi",
   "license": "ISC",
   "devDependencies": {
