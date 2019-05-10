@@ -16,9 +16,7 @@ declare type ShouldArguments = string | number | string[] | number[] | {
     [key: string]: ShouldArguments;
 };
 interface Object {
-    should: {
-        [key: string]: (...args: (ShouldArguments | Chai.Assertion)[]) => void;
-    };
+    should: Chai.Assertion;
 }
 declare const LightForm: {
     toObject: (...arg: any) => {

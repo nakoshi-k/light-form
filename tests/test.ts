@@ -10,9 +10,7 @@ interface Window{
 }
 type ShouldArguments = string|number|string[]|number[]|{[key:string]:ShouldArguments}
 interface Object{
-    should  : {
-        [key:string] : (...args:(ShouldArguments|Chai.Assertion)[]) => void
-    }
+    should  : Chai.Assertion
 }
 
 window.chai.should()
