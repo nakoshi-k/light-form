@@ -10,7 +10,7 @@
   "scripts": {
     "pretest": "webpack --config=\"webpack.config.test.js\"",
     "test": "./node_modules/.bin/mocha-headless-chrome -f ./www/index.html",
-    "build:tsc": "tsc",
+    "build:tsc": "./node_modules/.bin/tsc",
     "build:webpack": "webpack",
     "build:dev": "npm run build:tsc & npm run build:webpacknpm",
     "build": "npm run build:tsc & npm run build:webpack -- --mode=production",
