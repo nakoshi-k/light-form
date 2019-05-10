@@ -10,7 +10,7 @@ const getFile : (blob:Blob) => Promise<string|ArrayBuffer|null> = (blob:Blob) =>
     }
 })
 
-const fileSupport = ( elements = document.querySelectorAll(`input[type="file"]`) ) => 
+const fileSupport : (nodeList:NodeList) => void = ( elements = document.querySelectorAll(`input[type="file"]`) ) => 
 [].slice.call(elements)
 .forEach( (element:HTMLInputElement) => {
     const fileRead =  () => {
