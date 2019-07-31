@@ -1,7 +1,7 @@
 {
   "name": "light-form",
-  "version": "1.0.3",
-  "main" : "dist/index.js",
+  "version": "1.0.4",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nakoshi-k/light-form.git"
@@ -19,12 +19,11 @@
   "keywords": [
     "form",
     "json",
-    "object"    
+    "object"
   ],
   "author": "kei nakoshi",
   "license": "ISC",
   "devDependencies": {
-    "lodash": ">=4.17.11",
     "@types/chai": "4.1.2",
     "@types/expect": "^1.20.4",
     "@types/jsdom": "^11.12.0",
@@ -32,17 +31,18 @@
     "@types/node": "^9.6.42",
     "chai": "4.1.2",
     "jsdom": "^11.12.0",
+    "lodash": "^4.17.15",
     "mocha": "^5.2.0",
-    "mocha-headless-chrome": "^2.0.2",
-    "nyc": "^11.9.0",
+    "mocha-headless-chrome": "^2.0.3",
+    "nyc": "^14.1.1",
     "power-assert": "^1.6.1",
-    "puppeteer": "^1.12.2",
+    "puppeteer": "^1.19.0",
     "ts-loader": "^5.3.3",
     "ts-mocha": "^1.3.0",
     "ts-node": "^7.0.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.13.0",
-    "typedoc": "^0.11.1",
+    "typedoc": "^0.15.0",
     "typescript": "^3.3.3",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
