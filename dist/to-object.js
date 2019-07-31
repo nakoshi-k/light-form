@@ -46,6 +46,9 @@ const getValue = (field, child) => {
         }
         return "";
     }
+    if (child.type === "number") {
+        return parseInt(child.value);
+    }
     return child.value;
 };
 const toHierarchyData = (fields, values, split) => {
