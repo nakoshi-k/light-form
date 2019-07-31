@@ -38,7 +38,7 @@ const getFileValue = (child:HTMLInputElement) => {
     .map(key => <string>child.dataset[key])
 }
 
-const getValue : (field :string , child :HTMLInputElement|HTMLSelectElement|RadioNodeList) => string | string[] = (field,child) => {
+const getValue : (field :string , child :HTMLInputElement|HTMLSelectElement|RadioNodeList) => string | string[]|number|number[] = (field,child) => {
     if( isRadioNodeList(child))
         return getRadioNodeListValue(<RadioNodeList>child)
     
@@ -54,10 +54,14 @@ const getValue : (field :string , child :HTMLInputElement|HTMLSelectElement|Radi
         }
         return ""
     }
+    if((<HTMLInputElement>child).type === "number"){
+        return parseInt(child.value)
+    }    
+
     return child.value
 }
 
-const toHierarchyData = (fields : string[],values : (string|string[])[],split : string|RegExp) => {
+const toHierarchyData = (fields : string[],values : (string|string[]|number|number[])[],split : string|RegExp) => {
     const hierarchyFields = fields.map(field => field.split(split).filter(floor => floor !== ""))
     const data = values.reduce( (data,value,index) => {
         let swap : any = data
